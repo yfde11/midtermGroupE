@@ -13,7 +13,7 @@ struct Constants {
     struct CoreDataKey {
         static let title = "title"
         static let content = "content"
-        static let order = "order"
+        static let time = "time"
         static let picture = "picture"
         static let entityName = "JournalInfo"
     }

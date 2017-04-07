@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        JournalManager.shared.saveCoreData(title: "333", content: "333", order: 2, picture: NSData())
+        JournalManager.shared.saveCoreData(title: "333", content: "333", time: Date(), picture: NSData())
         
         getCoreData()
         
@@ -44,10 +44,10 @@ class MainViewController: UIViewController {
                 
                 if let title = result.value(forKey: Constants.CoreDataKey.title) as? String,
                     let content = result.value(forKey: Constants.CoreDataKey.content) as? String,
-                    let order = result.value(forKey: Constants.CoreDataKey.order) as? Int,
+                    let time = result.value(forKey: Constants.CoreDataKey.time) as? Date,
                     let picture = result.value(forKey: Constants.CoreDataKey.picture) as? NSData {
                     
-                    let coreDataJournal = Journal(title: title, content: content, order: order, picture: picture)
+                    let coreDataJournal = Journal(title: title, content: content, time: time, picture: picture)
                     coreDataJournals.append(coreDataJournal)
                     print(coreDataJournal.title)
                 }

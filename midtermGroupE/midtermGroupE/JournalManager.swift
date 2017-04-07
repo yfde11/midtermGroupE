@@ -14,7 +14,7 @@ class JournalManager {
     
     static let shared = JournalManager() //Singleton
     
-    func saveCoreData(title: String, content: String, order: Int, picture: NSData) {
+    func saveCoreData(title: String, content: String, time: Date, picture: NSData) {
         
         if let app = UIApplication.shared.delegate as? AppDelegate {
             
@@ -31,7 +31,7 @@ class JournalManager {
                 //                if results.count > 0 {
                 //                    results[0].title = title
                 //                    results[0].content = content
-                //                    results[0].order = Int64(order)
+                //                    results[0].time = time
                 //                    results[0].picture = picture
                 //
                 //                } else {
@@ -40,7 +40,7 @@ class JournalManager {
                 
                 entity.setValue(title, forKey: Constants.CoreDataKey.title)
                 entity.setValue(content, forKey: Constants.CoreDataKey.content)
-                entity.setValue(order, forKey: Constants.CoreDataKey.order)
+                entity.setValue(time, forKey: Constants.CoreDataKey.time)
                 entity.setValue(picture, forKey: Constants.CoreDataKey.picture)
                 //                }
                 

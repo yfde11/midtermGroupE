@@ -14,15 +14,15 @@ class Journal {
     
     let content: String
     
-    let order: Int
+    let time: Date
     
     let picture: NSData
     
-    init(title: String, content: String, order: Int, picture: NSData) {
+    init(title: String, content: String, time: Date, picture: NSData) {
         
         self.title = title
         self.content = content
-        self.order = order
+        self.time = time
         self.picture = picture
     }
     
