@@ -16,7 +16,7 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
     @IBOutlet weak var content: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        journalTitle.placeholder = "Title"
     }
     @IBAction func saveToCoreData(_ sender: Any) {
 
@@ -28,6 +28,7 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
         self.present(vc!, animated: true, completion: nil)
 
     }
+    
     @IBAction func selectImage(_ sender: Any) {
         let fusuma = FusumaViewController()
         fusuma.delegate = self

@@ -157,8 +157,9 @@
                                     <action selector="saveToCoreData:" destination="p8I-cd-eao" eventType="touchUpInside" id="TNO-K1-MoQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testPic" translatesAutoresizingMaskIntoConstraints="NO" id="ez2-Ae-wKs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="ez2-Ae-wKs">
                                 <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.20977512001991272" green="0.27019131183624268" blue="0.30366218090057373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="CkC-ed-qoC"/>
                                 </constraints>
@@ -177,29 +178,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-93-xC3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-93-xC3">
                                 <rect key="frame" x="22" y="330" width="331" height="30"/>
                                 <color key="textColor" red="0.93072789909999998" green="0.37686809900000001" blue="0.31569948790000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g2-tL-jkz">
-                                <rect key="frame" x="80" y="20" width="265" height="300"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="SMo-UY-zuH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="select picture"/>
+                                <state key="normal" title="select picture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="selectImage:" destination="p8I-cd-eao" eventType="touchUpInside" id="RMM-T6-rmj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31f-1Q-53T">
-                                <rect key="frame" x="2" y="21" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.42999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="shutter_button" backgroundImage="ic_close">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31f-1Q-53T">
+                                <rect key="frame" x="0.0" y="20" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="bJk-Gs-ELQ"/>
+                                    <constraint firstAttribute="height" constant="48" id="maI-JZ-DtR"/>
+                                </constraints>
+                                <state key="normal" image="cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="cancel:" destination="p8I-cd-eao" eventType="touchUpInside" id="gMe-vX-4nC"/>
@@ -217,15 +222,17 @@
                             <constraint firstItem="oNK-3Q-rdh" firstAttribute="leading" secondItem="I8P-dn-WHQ" secondAttribute="leading" constant="22" id="Bol-Wa-swE"/>
                             <constraint firstAttribute="trailing" secondItem="ez2-Ae-wKs" secondAttribute="trailing" id="C6j-N2-jPh"/>
                             <constraint firstAttribute="trailing" secondItem="oNK-3Q-rdh" secondAttribute="trailing" constant="22" id="Ga6-7Y-xl6"/>
-                            <constraint firstItem="5g2-tL-jkz" firstAttribute="leading" secondItem="I8P-dn-WHQ" secondAttribute="leading" constant="80" id="JAN-0m-BWi"/>
+                            <constraint firstItem="5g2-tL-jkz" firstAttribute="leading" secondItem="I8P-dn-WHQ" secondAttribute="leading" id="JAN-0m-BWi"/>
                             <constraint firstAttribute="trailing" secondItem="VnS-xo-s7T" secondAttribute="trailing" constant="22" id="KZq-yb-Tl6"/>
                             <constraint firstItem="ez2-Ae-wKs" firstAttribute="leading" secondItem="I8P-dn-WHQ" secondAttribute="leading" id="Kyj-ya-2pb"/>
                             <constraint firstItem="sYL-vS-tNq" firstAttribute="top" secondItem="VnS-xo-s7T" secondAttribute="bottom" constant="20" id="LEb-5U-NBI"/>
                             <constraint firstItem="Djh-pO-eDZ" firstAttribute="top" secondItem="sYL-vS-tNq" secondAttribute="bottom" constant="8" id="VpR-KV-U5M"/>
                             <constraint firstItem="pLv-93-xC3" firstAttribute="top" secondItem="ez2-Ae-wKs" secondAttribute="bottom" constant="10" id="XSc-xI-A87"/>
                             <constraint firstItem="ez2-Ae-wKs" firstAttribute="top" secondItem="eW4-Hk-mlB" secondAttribute="bottom" id="dCe-Zg-lin"/>
-                            <constraint firstAttribute="trailing" secondItem="5g2-tL-jkz" secondAttribute="trailing" constant="30" id="eJJ-ag-Zuv"/>
+                            <constraint firstAttribute="trailing" secondItem="5g2-tL-jkz" secondAttribute="trailing" id="eJJ-ag-Zuv"/>
+                            <constraint firstItem="31f-1Q-53T" firstAttribute="top" secondItem="eW4-Hk-mlB" secondAttribute="bottom" id="hRh-kR-7kX"/>
                             <constraint firstItem="VnS-xo-s7T" firstAttribute="top" secondItem="oNK-3Q-rdh" secondAttribute="bottom" constant="10" id="j6Z-DZ-dzq"/>
+                            <constraint firstItem="31f-1Q-53T" firstAttribute="leading" secondItem="I8P-dn-WHQ" secondAttribute="leading" id="mvX-CD-8mK"/>
                             <constraint firstItem="sYL-vS-tNq" firstAttribute="leading" secondItem="I8P-dn-WHQ" secondAttribute="leading" constant="108" id="tWk-CQ-qj1"/>
                         </constraints>
                     </view>
@@ -260,8 +267,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_close" width="48" height="48"/>
-        <image name="shutter_button" width="40" height="40"/>
-        <image name="testPic" width="125" height="125"/>
+        <image name="cancel" width="25" height="25"/>
+        <image name="icon_photo" width="44" height="44"/>
     </resources>
 </document>
