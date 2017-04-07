@@ -17,6 +17,7 @@
 		9B35DD781E972ED80093C11E /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD761E972ED80093C11E /* JournalTableViewCell.swift */; };
 		9B35DD791E972ED80093C11E /* JournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */; };
 		9B35DD7D1E973B570093C11E /* AddJournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */; };
+		9B35DD801E973D760093C11E /* EditJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD7F1E973D760093C11E /* EditJournalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9B35DD761E972ED80093C11E /* JournalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalTableViewCell.xib; sourceTree = "<group>"; };
 		9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalsViewController.swift; sourceTree = "<group>"; };
+		9B35DD7F1E973D760093C11E /* EditJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditJournalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				4372BF141E9645B7005F5422 /* MainViewController.swift */,
 				9B35DD731E972E560093C11E /* List */,
 				9B35DD7E1E973B5C0093C11E /* Add */,
+				9B35DD811E973D7E0093C11E /* Edit */,
 			);
 			path = midtermGroupE;
 			sourceTree = "<group>";
@@ -93,6 +96,14 @@
 				9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */,
 			);
 			name = Add;
+			sourceTree = "<group>";
+		};
+		9B35DD811E973D7E0093C11E /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				9B35DD7F1E973D760093C11E /* EditJournalViewController.swift */,
+			);
+			name = Edit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 			files = (
 				9B35DD7D1E973B570093C11E /* AddJournalsViewController.swift in Sources */,
 				9B35DD641E96428F0093C11E /* midtermGroupE.xcdatamodeld in Sources */,
+				9B35DD801E973D760093C11E /* EditJournalViewController.swift in Sources */,
 				9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */,
 				9B35DD781E972ED80093C11E /* JournalTableViewCell.swift in Sources */,
 				4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */,
