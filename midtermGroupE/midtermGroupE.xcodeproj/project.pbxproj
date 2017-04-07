@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF141E9645B7005F5422 /* MainViewController.swift */; };
+		4372BF1D1E971F99005F5422 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF1C1E971F99005F5422 /* Journal.swift */; };
+		4372BF1F1E972E65005F5422 /* JournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF1E1E972E65005F5422 /* JournalManager.swift */; };
+		4372BF211E972F4C005F5422 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF201E972F4C005F5422 /* Constants.swift */; };
 		9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD5B1E96428F0093C11E /* AppDelegate.swift */; };
 		9B35DD5E1E96428F0093C11E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD5D1E96428F0093C11E /* ViewController.swift */; };
 		9B35DD611E96428F0093C11E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD5F1E96428F0093C11E /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		4372BF141E9645B7005F5422 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4372BF1C1E971F99005F5422 /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		4372BF1E1E972E65005F5422 /* JournalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
+		4372BF201E972F4C005F5422 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9B35DD581E96428F0093C11E /* midtermGroupE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midtermGroupE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B35DD5B1E96428F0093C11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B35DD5D1E96428F0093C11E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +70,11 @@
 				9B35DD651E96428F0093C11E /* Assets.xcassets */,
 				9B35DD671E96428F0093C11E /* LaunchScreen.storyboard */,
 				9B35DD6A1E96428F0093C11E /* Info.plist */,
-				9B35DD621E96428F0093C11E /* midtermGroupE.xcdatamodeld */,
 				4372BF141E9645B7005F5422 /* MainViewController.swift */,
+				4372BF1C1E971F99005F5422 /* Journal.swift */,
+				4372BF1E1E972E65005F5422 /* JournalManager.swift */,
+				4372BF201E972F4C005F5422 /* Constants.swift */,
+				9B35DD621E96428F0093C11E /* midtermGroupE.xcdatamodeld */,
 			);
 			path = midtermGroupE;
 			sourceTree = "<group>";
@@ -162,9 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B35DD641E96428F0093C11E /* midtermGroupE.xcdatamodeld in Sources */,
+				4372BF1D1E971F99005F5422 /* Journal.swift in Sources */,
 				9B35DD5E1E96428F0093C11E /* ViewController.swift in Sources */,
 				9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */,
+				4372BF211E972F4C005F5422 /* Constants.swift in Sources */,
 				4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */,
+				4372BF1F1E972E65005F5422 /* JournalManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
