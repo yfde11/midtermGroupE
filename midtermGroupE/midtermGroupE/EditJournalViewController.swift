@@ -9,9 +9,9 @@
 import UIKit
 
 class EditJournalViewController: UIViewController {
-    
+
     var receivedJournals: [Journal] = []
-    
+
     @IBOutlet weak var editImage: UIImageView!
 
     @IBOutlet weak var editTitle: UITextField!

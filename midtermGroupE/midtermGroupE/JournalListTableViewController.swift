@@ -9,9 +9,9 @@
 import UIKit
 
 class JournalListTableViewController: UITableViewController {
-    
+
     var journals: [Journal] = []
-    
+
     @IBAction func addJournalBtn(_ sender: Any) {
         print("next page")
         let vc  = self.storyboard?.instantiateViewController(withIdentifier: "AddJournalsViewController")
@@ -22,7 +22,7 @@ class JournalListTableViewController: UITableViewController {
         super.viewDidLoad()
 
         setUp()
-        
+
         JournalManager.shared.getCoreData()
         journals = JournalManager.shared.journals
     }
@@ -54,7 +54,7 @@ class JournalListTableViewController: UITableViewController {
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: "JournalTableViewCell", for: indexPath) as? JournalTableViewCell
             else { return UITableViewCell() }
-        
+
         cell.journalImage.image = UIImage(data: journals[indexPath.row].picture as Data)
 
         cell.journalTitle.text = journals[indexPath.row].title
@@ -67,27 +67,27 @@ class JournalListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         guard
             let indexPath = tableView.indexPathForSelectedRow,
             let currentCell = tableView.cellForRow(at: indexPath) as? JournalTableViewCell else {
                 return
         }
-        
+
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let editJournalViewController = storyBoard.instantiateViewController(withIdentifier: "EditJournalViewController") as? EditJournalViewController else { return }
-        
+
         editJournalViewController.receivedJournals = [journals[indexPath.row]]
-        
+
         self.navigationController?.pushViewController(editJournalViewController, animated: true)
     }
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
+
         if editingStyle == .delete {
-            
+
             journals.remove(at: indexPath.row)
-            
+
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
