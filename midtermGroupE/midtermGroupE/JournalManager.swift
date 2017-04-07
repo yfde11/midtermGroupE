@@ -20,21 +20,21 @@ class JournalManager {
 
             let context = app.persistentContainer.viewContext
 
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
-            request.predicate = NSPredicate(format: "order == %@", order)
+//            let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
+//            request.predicate = NSPredicate(format: "order == %@", order)
 
             do {
-                guard let results = try context.fetch(request) as? [JournalInfo] else {
-                    return
-                }
-
-                if results.count > 0 {
-                    results[0].title = title
-                    results[0].content = content
-                    results[0].order = Int64(order)
-                    results[0].picture = picture
-
-                } else {
+//                guard let results = try context.fetch(request) as? [JournalInfo] else {
+//                    return
+//                }
+//
+//                if results.count > 0 {
+//                    results[0].title = title
+//                    results[0].content = content
+//                    results[0].order = Int64(order)
+//                    results[0].picture = picture
+//
+//                } else {
 
                     let entity = NSEntityDescription.insertNewObject(forEntityName: Constants.CoreDataKey.entityName, into: context)
 
@@ -42,9 +42,10 @@ class JournalManager {
                     entity.setValue(content, forKey: Constants.CoreDataKey.content)
                     entity.setValue(order, forKey: Constants.CoreDataKey.order)
                     entity.setValue(picture, forKey: Constants.CoreDataKey.picture)
-                }
+//                }
 
                 app.saveContext()
+                print("SAVED")
 
             } catch {
 
@@ -52,7 +53,7 @@ class JournalManager {
 
             }
         }
-        //        print(NSPersistentContainer.defaultDirectoryURL())
+//                print(NSPersistentContainer.defaultDirectoryURL())
     }
 
 }

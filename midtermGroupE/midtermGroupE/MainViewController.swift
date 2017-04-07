@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
+
+    var journals: [Journal] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        JournalManager.shared.saveCoreData(title: "333", content: "333", order: 2, picture: NSData())
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,14 +25,40 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
+    func getCoreData() {
+        if Reachability.isConnectedToNetwork() != true {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+            guard let app = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+
+            let managedContext = app.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
+
+            do {
+                let result = try managedContext.fetch(fetchRequest)
+                var coreDataJournals = [Journal]()
+
+                for info in (result as? [NSManagedObject])! {
+
+                    guard let title = info.value(forKey: Constants.CoreDataKey.title) as? String,
+                        let content = info.value(forKey: Constants.CoreDataKey.content) as? String,
+                        let order = info.value(forKey: Constants.CoreDataKey.order) as? Int,
+                        let picture = info.value(forKey: Constants.CoreDataKey.picture) as? NSData else {
+
+                            return
+                    }
+
+                    let coreDataJournal = Journal(title: title, content: content, order: order, picture: picture)
+                    coreDataJournals.append(coreDataJournal)
+                }
+
+                journals = coreDataJournals
+
+            } catch let error as NSError {
+                print("Could not fetch \(error), \(error.userInfo)")
+            }
+        }
     }
-    */
 
 }
