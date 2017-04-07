@@ -30,6 +30,7 @@ class JournalListTableViewController: UITableViewController {
     func setUp() {
         let journalNib = UINib(nibName: JournalTableViewCell.identifier, bundle: nil)
         tableView.register(journalNib, forCellReuseIdentifier: JournalTableViewCell.identifier)
+        tableView.separatorStyle = .none
 
     }
 

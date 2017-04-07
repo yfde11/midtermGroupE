@@ -37,14 +37,20 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
     }
 
     // Return the image but called after is dismissed.
-    func fusumaDismissedWithImage(image: UIImage) {
-
-        print("Called just after FusumaViewController is dismissed.")
+    func fusumaDismissedWithImage(image: UIImage, source: FusumaMode) {
+        switch source {
+        case .camera:
+            print("Called just after dismissed FusumaViewController using Camera")
+        case .library:
+            print("Called just after dismissed FusumaViewController using Camera Roll")
+        default:
+            print("Called just after dismissed FusumaViewController")
+        }
     }
 
     func fusumaVideoCompleted(withFileURL fileURL: URL) {
-
-        print("Called just after a video has been selected.")
+        print("video completed and output to file: \(fileURL)")
+//        self.fileUrlLabel.text = "file output to: \(fileURL.absoluteString)"
     }
 
     func fusumaCameraRollUnauthorized() {

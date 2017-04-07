@@ -231,7 +231,7 @@ public class FusumaViewController: UIViewController {
                 )
             )
 
-            self.view.layoutIfNeeded()
+//            self.view.layoutIfNeeded()
         }
 
         if fusumaCropImage {
