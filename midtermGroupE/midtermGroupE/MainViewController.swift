@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
 
         JournalManager.shared.saveCoreData(title: "333", content: "333", order: 2, picture: NSData())
 
+        getCoreData()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,39 +28,39 @@ class MainViewController: UIViewController {
     }
 
     func getCoreData() {
-        if Reachability.isConnectedToNetwork() != true {
 
-            guard let app = UIApplication.shared.delegate as? AppDelegate else {
-                return
-            }
+        guard let app = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
 
-            let managedContext = app.persistentContainer.viewContext
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
+        let context = app.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
 
-            do {
-                let result = try managedContext.fetch(fetchRequest)
-                var coreDataJournals = [Journal]()
+        do {
+            let results = try context.fetch(fetchRequest)
+            var coreDataJournals = [Journal]()
 
-                for info in (result as? [NSManagedObject])! {
+            for result in (results as? [NSManagedObject])! {
 
-                    guard let title = info.value(forKey: Constants.CoreDataKey.title) as? String,
-                        let content = info.value(forKey: Constants.CoreDataKey.content) as? String,
-                        let order = info.value(forKey: Constants.CoreDataKey.order) as? Int,
-                        let picture = info.value(forKey: Constants.CoreDataKey.picture) as? NSData else {
-
-                            return
-                    }
+                if let title = result.value(forKey: Constants.CoreDataKey.title) as? String,
+                    let content = result.value(forKey: Constants.CoreDataKey.content) as? String,
+                    let order = result.value(forKey: Constants.CoreDataKey.order) as? Int,
+                    let picture = result.value(forKey: Constants.CoreDataKey.picture) as? NSData {
 
                     let coreDataJournal = Journal(title: title, content: content, order: order, picture: picture)
                     coreDataJournals.append(coreDataJournal)
+                    print(coreDataJournal.title)
                 }
 
-                journals = coreDataJournals
-
-            } catch let error as NSError {
-                print("Could not fetch \(error), \(error.userInfo)")
             }
+
+            journals = coreDataJournals
+            print(coreDataJournals.count)
+
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
         }
+
     }
 
 }

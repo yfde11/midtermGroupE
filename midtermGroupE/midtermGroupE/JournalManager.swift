@@ -53,7 +53,7 @@ class JournalManager {
 
             }
         }
-//                print(NSPersistentContainer.defaultDirectoryURL())
+                print(NSPersistentContainer.defaultDirectoryURL())
     }
 
 }
