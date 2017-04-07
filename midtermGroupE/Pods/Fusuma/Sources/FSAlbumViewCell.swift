@@ -10,23 +10,23 @@ import UIKit
 import Photos
 
 final class FSAlbumViewCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var imageView: UIImageView!
-    
+
     var image: UIImage? {
-        
+
         didSet {
-            
-            self.imageView.image = image            
+
+            self.imageView.image = image
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.isSelected = false
     }
-    
-    override var isSelected : Bool {
+
+    override var isSelected: Bool {
         didSet {
             self.layer.borderColor = isSelected ? fusumaTintColor.cgColor : UIColor.clear.cgColor
             self.layer.borderWidth = isSelected ? 2 : 0
