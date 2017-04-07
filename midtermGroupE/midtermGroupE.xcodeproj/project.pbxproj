@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF141E9645B7005F5422 /* MainViewController.swift */; };
 		43C658DC1E9753F3008DF730 /* JournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C658DB1E9753F3008DF730 /* JournalManager.swift */; };
 		43C658DE1E975431008DF730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C658DD1E975431008DF730 /* Constants.swift */; };
 		43C658E01E975550008DF730 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C658DF1E975550008DF730 /* Journal.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4372BF141E9645B7005F5422 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		43C658DB1E9753F3008DF730 /* JournalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
 		43C658DD1E975431008DF730 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		43C658DF1E975550008DF730 /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				9B35DD671E96428F0093C11E /* LaunchScreen.storyboard */,
 				9B35DD6A1E96428F0093C11E /* Info.plist */,
 				9B35DD621E96428F0093C11E /* midtermGroupE.xcdatamodeld */,
-				4372BF141E9645B7005F5422 /* MainViewController.swift */,
 				43C658DB1E9753F3008DF730 /* JournalManager.swift */,
 				9B35DD731E972E560093C11E /* List */,
 				9B35DD7E1E973B5C0093C11E /* Add */,
@@ -214,7 +211,6 @@
 				9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */,
 				9B35DD781E972ED80093C11E /* JournalTableViewCell.swift in Sources */,
 				43C658DC1E9753F3008DF730 /* JournalManager.swift in Sources */,
-				4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */,
 				9B35DD751E972EA80093C11E /* JournalListTableViewController.swift in Sources */,
 				43C658DE1E975431008DF730 /* Constants.swift in Sources */,
 			);
