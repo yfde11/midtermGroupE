@@ -28,18 +28,12 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
         self.present(vc!, animated: true, completion: nil)
 
     }
-    
+
     @IBAction func selectImage(_ sender: Any) {
         let fusuma = FusumaViewController()
         fusuma.delegate = self
         fusuma.cropHeightRatio = 0.6
         self.present(fusuma, animated: true, completion: nil)
-    }
-
-    // Return the image which is selected from camera roll or is taken via the camera.
-    func fusumaImageSelected(image: UIImage) {
-
-        print("Image selected")
     }
 
     // Return the image but called after is dismissed.

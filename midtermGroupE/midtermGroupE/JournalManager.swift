@@ -102,9 +102,9 @@ class JournalManager {
         do {
             let results = try context.fetch(fetchRequest) as? [NSManagedObject]
             let newIndexPath = (results?.count)! - 1 - indexPath.row
-            
+
             context.delete((results?[newIndexPath])!)
-            
+
             app.saveContext()
 
         } catch {
