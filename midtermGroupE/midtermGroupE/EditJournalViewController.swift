@@ -9,6 +9,9 @@
 import UIKit
 
 class EditJournalViewController: UIViewController {
+    
+    var receivedJournals: [Journal] = []
+    
     @IBOutlet weak var editImage: UIImageView!
 
     @IBOutlet weak var editTitle: UITextField!
@@ -16,6 +19,9 @@ class EditJournalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        editImage.image = UIImage(data: receivedJournals[0].picture as Data)
+        editTitle.text = receivedJournals[0].title
+        editContent.text = receivedJournals[0].content
     }
     @IBAction func finishEdit(_ sender: Any) {
         print("Edit success")

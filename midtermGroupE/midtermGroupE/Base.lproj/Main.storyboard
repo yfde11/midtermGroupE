@@ -47,7 +47,7 @@
         <!--Edit Journal View Controller-->
         <scene sceneID="RET-9A-ev7">
             <objects>
-                <viewController id="6FU-zi-nts" customClass="EditJournalViewController" customModule="midtermGroupE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditJournalViewController" id="6FU-zi-nts" customClass="EditJournalViewController" customModule="midtermGroupE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OUS-Pk-hL5"/>
                         <viewControllerLayoutGuide type="bottom" id="naA-7x-avO"/>
