@@ -9,6 +9,9 @@
 import UIKit
 
 class JournalListTableViewController: UITableViewController {
+    
+    var journals: [Journal] = []
+    
     @IBAction func addJournalBtn(_ sender: Any) {
         print("next page")
         let vc  = self.storyboard?.instantiateViewController(withIdentifier: "AddJournalsViewController")
@@ -19,6 +22,9 @@ class JournalListTableViewController: UITableViewController {
         super.viewDidLoad()
 
         setUp()
+        
+        JournalManager.shared.getCoreData()
+        journals = JournalManager.shared.journals
     }
 
     func setUp() {
@@ -40,7 +46,7 @@ class JournalListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return journals.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,9 +54,10 @@ class JournalListTableViewController: UITableViewController {
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: "JournalTableViewCell", for: indexPath) as? JournalTableViewCell
             else { return UITableViewCell() }
-        cell.journalImage.image = #imageLiteral(resourceName: "testPic")
+        
+        cell.journalImage.image = UIImage(data: journals[indexPath.row].picture as Data)
 
-        cell.journalTitle.text = "test"
+        cell.journalTitle.text = journals[indexPath.row].title
 
         return cell
     }
