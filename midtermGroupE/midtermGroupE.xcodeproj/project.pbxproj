@@ -10,6 +10,7 @@
 		4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF141E9645B7005F5422 /* MainViewController.swift */; };
 		43C658DC1E9753F3008DF730 /* JournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C658DB1E9753F3008DF730 /* JournalManager.swift */; };
 		43C658DE1E975431008DF730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C658DD1E975431008DF730 /* Constants.swift */; };
+		43C658E01E975550008DF730 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C658DF1E975550008DF730 /* Journal.swift */; };
 		9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD5B1E96428F0093C11E /* AppDelegate.swift */; };
 		9B35DD611E96428F0093C11E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD5F1E96428F0093C11E /* Main.storyboard */; };
 		9B35DD641E96428F0093C11E /* midtermGroupE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD621E96428F0093C11E /* midtermGroupE.xcdatamodeld */; };
@@ -26,6 +27,7 @@
 		4372BF141E9645B7005F5422 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		43C658DB1E9753F3008DF730 /* JournalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
 		43C658DD1E975431008DF730 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43C658DF1E975550008DF730 /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		9B35DD581E96428F0093C11E /* midtermGroupE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midtermGroupE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B35DD5B1E96428F0093C11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B35DD601E96428F0093C11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				9B35DD7E1E973B5C0093C11E /* Add */,
 				9B35DD811E973D7E0093C11E /* Edit */,
 				43C658DD1E975431008DF730 /* Constants.swift */,
+				43C658DF1E975550008DF730 /* Journal.swift */,
 			);
 			path = midtermGroupE;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B35DD7D1E973B570093C11E /* AddJournalsViewController.swift in Sources */,
+				43C658E01E975550008DF730 /* Journal.swift in Sources */,
 				9B35DD641E96428F0093C11E /* midtermGroupE.xcdatamodeld in Sources */,
 				9B35DD801E973D760093C11E /* EditJournalViewController.swift in Sources */,
 				9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */,
