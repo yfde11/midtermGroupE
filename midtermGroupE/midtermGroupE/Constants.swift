@@ -9,7 +9,7 @@
 import Foundation
 
 struct Constants {
-    
+
     struct CoreDataKey {
         static let title = "title"
         static let content = "content"

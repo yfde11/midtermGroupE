@@ -20,12 +20,15 @@
 		9B35DD791E972ED80093C11E /* JournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */; };
 		9B35DD7D1E973B570093C11E /* AddJournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */; };
 		9B35DD801E973D760093C11E /* EditJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD7F1E973D760093C11E /* EditJournalViewController.swift */; };
+		CAB8CED1B56B7C02071DC7F0 /* Pods_midtermGroupE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E89ED4931046392B1AD94AA /* Pods_midtermGroupE.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3D64C3AA21C88578A32757 /* Pods-midtermGroupE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-midtermGroupE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-midtermGroupE/Pods-midtermGroupE.debug.xcconfig"; sourceTree = "<group>"; };
 		43C658DB1E9753F3008DF730 /* JournalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
 		43C658DD1E975431008DF730 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		43C658DF1E975550008DF730 /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		8E89ED4931046392B1AD94AA /* Pods_midtermGroupE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_midtermGroupE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B35DD581E96428F0093C11E /* midtermGroupE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midtermGroupE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B35DD5B1E96428F0093C11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B35DD601E96428F0093C11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalTableViewCell.xib; sourceTree = "<group>"; };
 		9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalsViewController.swift; sourceTree = "<group>"; };
 		9B35DD7F1E973D760093C11E /* EditJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditJournalViewController.swift; sourceTree = "<group>"; };
+		A41873E4F34D684A923624B2 /* Pods-midtermGroupE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-midtermGroupE.release.xcconfig"; path = "Pods/Target Support Files/Pods-midtermGroupE/Pods-midtermGroupE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB8CED1B56B7C02071DC7F0 /* Pods_midtermGroupE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				9B35DD5A1E96428F0093C11E /* midtermGroupE */,
 				9B35DD591E96428F0093C11E /* Products */,
+				E1697BE0940C52F41CC504BB /* Pods */,
+				EFC019CE8F52B6D98E161188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,23 @@
 			name = Edit;
 			sourceTree = "<group>";
 		};
+		E1697BE0940C52F41CC504BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3D64C3AA21C88578A32757 /* Pods-midtermGroupE.debug.xcconfig */,
+				A41873E4F34D684A923624B2 /* Pods-midtermGroupE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EFC019CE8F52B6D98E161188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E89ED4931046392B1AD94AA /* Pods_midtermGroupE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,10 +143,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B35DD6D1E96428F0093C11E /* Build configuration list for PBXNativeTarget "midtermGroupE" */;
 			buildPhases = (
+				C262A3EAFB2950E825E41050 /* [CP] Check Pods Manifest.lock */,
 				9B35DD541E96428F0093C11E /* Sources */,
 				9B35DD551E96428F0093C11E /* Frameworks */,
 				9B35DD561E96428F0093C11E /* Resources */,
 				9B35DD701E9643E40093C11E /* Swiftlint */,
+				39CADDC7B48BEF46AE9421B8 /* [CP] Embed Pods Frameworks */,
+				732E797F734806083145C2ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		39CADDC7B48BEF46AE9421B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-midtermGroupE/Pods-midtermGroupE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		732E797F734806083145C2ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-midtermGroupE/Pods-midtermGroupE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9B35DD701E9643E40093C11E /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +253,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		C262A3EAFB2950E825E41050 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -333,6 +405,7 @@
 		};
 		9B35DD6E1E96428F0093C11E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3D64C3AA21C88578A32757 /* Pods-midtermGroupE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YX74XFK6Z8;
@@ -346,6 +419,7 @@
 		};
 		9B35DD6F1E96428F0093C11E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41873E4F34D684A923624B2 /* Pods-midtermGroupE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YX74XFK6Z8;
