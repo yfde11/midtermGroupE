@@ -23,13 +23,7 @@ class JournalManager {
 
             //            let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
             //            request.predicate = NSPredicate(format: "order == %@", order)
-<<<<<<< HEAD
-            
-//            do {
-=======
 
-            do {
->>>>>>> 024fac7d7e7ed7e3ccaf78d2378eb269821f37a7
                 //                guard let results = try context.fetch(request) as? [JournalInfo] else {
                 //                    return
                 //                }
@@ -52,21 +46,7 @@ class JournalManager {
 
                 app.saveContext()
                 print("SAVED")
-<<<<<<< HEAD
-                
-//            } catch {
-//                
-//                print(error)
-//                
-//            }
-=======
 
-            } catch {
-
-                print(error)
-
-            }
->>>>>>> 024fac7d7e7ed7e3ccaf78d2378eb269821f37a7
         }
         print(NSPersistentContainer.defaultDirectoryURL())
     }
