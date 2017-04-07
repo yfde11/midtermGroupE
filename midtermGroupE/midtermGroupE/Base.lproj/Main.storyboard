@@ -95,6 +95,9 @@
                                 <state key="normal" title="Modify">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="finishEdit:" destination="6FU-zi-nts" eventType="touchUpInside" id="Zxu-2O-hrz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,6 +120,11 @@
                             <constraint firstAttribute="trailing" secondItem="Y5T-kq-GbZ" secondAttribute="trailing" constant="22" id="zvX-cA-6x9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editContent" destination="Y5T-kq-GbZ" id="D4i-xm-4VT"/>
+                        <outlet property="editImage" destination="u8T-XJ-7c5" id="xS8-vW-d7J"/>
+                        <outlet property="editTitle" destination="SZf-62-J4T" id="Aig-TM-Ru1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVw-ir-NQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
