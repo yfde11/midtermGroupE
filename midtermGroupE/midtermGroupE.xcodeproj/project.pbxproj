@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4372BF141E9645B7005F5422 /* MainViewController.swift */; };
 		9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD5B1E96428F0093C11E /* AppDelegate.swift */; };
-		9B35DD5E1E96428F0093C11E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD5D1E96428F0093C11E /* ViewController.swift */; };
 		9B35DD611E96428F0093C11E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD5F1E96428F0093C11E /* Main.storyboard */; };
 		9B35DD641E96428F0093C11E /* midtermGroupE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD621E96428F0093C11E /* midtermGroupE.xcdatamodeld */; };
 		9B35DD661E96428F0093C11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD651E96428F0093C11E /* Assets.xcassets */; };
 		9B35DD691E96428F0093C11E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD671E96428F0093C11E /* LaunchScreen.storyboard */; };
+		9B35DD751E972EA80093C11E /* JournalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD741E972EA80093C11E /* JournalListTableViewController.swift */; };
+		9B35DD781E972ED80093C11E /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD761E972ED80093C11E /* JournalTableViewCell.swift */; };
+		9B35DD791E972ED80093C11E /* JournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */; };
+		9B35DD7D1E973B570093C11E /* AddJournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4372BF141E9645B7005F5422 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9B35DD581E96428F0093C11E /* midtermGroupE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midtermGroupE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B35DD5B1E96428F0093C11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B35DD5D1E96428F0093C11E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B35DD601E96428F0093C11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B35DD631E96428F0093C11E /* midtermGroupE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = midtermGroupE.xcdatamodel; sourceTree = "<group>"; };
 		9B35DD651E96428F0093C11E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B35DD681E96428F0093C11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B35DD6A1E96428F0093C11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B35DD741E972EA80093C11E /* JournalListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalListTableViewController.swift; sourceTree = "<group>"; };
+		9B35DD761E972ED80093C11E /* JournalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
+		9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalTableViewCell.xib; sourceTree = "<group>"; };
+		9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				9B35DD5B1E96428F0093C11E /* AppDelegate.swift */,
-				9B35DD5D1E96428F0093C11E /* ViewController.swift */,
 				9B35DD5F1E96428F0093C11E /* Main.storyboard */,
 				9B35DD651E96428F0093C11E /* Assets.xcassets */,
 				9B35DD671E96428F0093C11E /* LaunchScreen.storyboard */,
 				9B35DD6A1E96428F0093C11E /* Info.plist */,
 				9B35DD621E96428F0093C11E /* midtermGroupE.xcdatamodeld */,
 				4372BF141E9645B7005F5422 /* MainViewController.swift */,
+				9B35DD731E972E560093C11E /* List */,
+				9B35DD7E1E973B5C0093C11E /* Add */,
 			);
 			path = midtermGroupE;
+			sourceTree = "<group>";
+		};
+		9B35DD731E972E560093C11E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9B35DD741E972EA80093C11E /* JournalListTableViewController.swift */,
+				9B35DD761E972ED80093C11E /* JournalTableViewCell.swift */,
+				9B35DD771E972ED80093C11E /* JournalTableViewCell.xib */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		9B35DD7E1E973B5C0093C11E /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				9B35DD7C1E973B570093C11E /* AddJournalsViewController.swift */,
+			);
+			name = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +159,7 @@
 				9B35DD691E96428F0093C11E /* LaunchScreen.storyboard in Resources */,
 				9B35DD661E96428F0093C11E /* Assets.xcassets in Resources */,
 				9B35DD611E96428F0093C11E /* Main.storyboard in Resources */,
+				9B35DD791E972ED80093C11E /* JournalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B35DD7D1E973B570093C11E /* AddJournalsViewController.swift in Sources */,
 				9B35DD641E96428F0093C11E /* midtermGroupE.xcdatamodeld in Sources */,
-				9B35DD5E1E96428F0093C11E /* ViewController.swift in Sources */,
 				9B35DD5C1E96428F0093C11E /* AppDelegate.swift in Sources */,
+				9B35DD781E972ED80093C11E /* JournalTableViewCell.swift in Sources */,
 				4372BF151E9645B7005F5422 /* MainViewController.swift in Sources */,
+				9B35DD751E972EA80093C11E /* JournalListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
