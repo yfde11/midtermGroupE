@@ -9,6 +9,11 @@
 import UIKit
 
 class JournalListTableViewController: UITableViewController {
+    @IBAction func addJournalBtn(_ sender: Any) {
+        print("next page")
+        let vc  = self.storyboard?.instantiateViewController(withIdentifier: "AddJournalsViewController")
+        self.present(vc!, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
