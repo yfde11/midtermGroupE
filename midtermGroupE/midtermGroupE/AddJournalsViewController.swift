@@ -93,4 +93,8 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
         print("Called when the close button is pressed")
     }
 
+    @IBAction func cancel(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "root")
+        self.present(vc!, animated: false, completion: nil)
+    }
 }
