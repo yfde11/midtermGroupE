@@ -24,12 +24,13 @@ class JournalListTableViewController: UITableViewController {
         setUp()
         
         JournalManager.shared.getCoreData()
-        journals = JournalManager.shared.journals
+        journals = JournalManager.shared.journals.reversed()
     }
 
     func setUp() {
         let journalNib = UINib(nibName: JournalTableViewCell.identifier, bundle: nil)
         tableView.register(journalNib, forCellReuseIdentifier: JournalTableViewCell.identifier)
+
     }
 
     override func didReceiveMemoryWarning() {
