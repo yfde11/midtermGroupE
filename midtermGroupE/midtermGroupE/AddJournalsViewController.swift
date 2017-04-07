@@ -9,7 +9,7 @@
 import UIKit
 import Fusuma
 
-class AddJournalsViewController: UIViewController, FusumaDelegate {
+class AddJournalsViewController: UIViewController,FusumaDelegate {
 
     @IBOutlet weak var journalImagePicker: UIImageView!
     @IBOutlet weak var journalTitle: UITextField!
@@ -49,12 +49,37 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
         print("Called just after a video has been selected.")
     }
 
-    // When camera roll is not authorized, this method is called.
     func fusumaCameraRollUnauthorized() {
-
+        
         print("Camera roll unauthorized")
+        
+        let alert = UIAlertController(title: "Access Requested", message: "Saving image needs to access your photo album", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { (action) -> Void in
+            
+            if let url = URL(string:UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.openURL(url)
+            }
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
-    
+    public func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+//        print("Image mediatype: \(metaData.mediaType)")
+//        print("Source image size: \(metaData.pixelWidth)x\(metaData.pixelHeight)")
+//        print("Creation date: \(metaData.creationDate)")
+//        print("Modification date: \(metaData.modificationDate)")
+//        print("Video duration: \(metaData.duration)")
+//        print("Is favourite: \(metaData.isFavourite)")
+//        print("Is hidden: \(metaData.isHidden)")
+//        print("Location: \(metaData.location)")
+    }
+
     func fusumaClosed() {
         print("Called when the FusumaViewController disappeared")
     }
