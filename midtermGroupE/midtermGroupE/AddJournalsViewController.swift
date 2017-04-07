@@ -18,10 +18,10 @@ class AddJournalsViewController: UIViewController {
 
     }
     @IBAction func saveToCoreData(_ sender: Any) {
-        print("SAVE!!")
         
         let imageData = NSData(data: UIImageJPEGRepresentation(journalImagePicker.image!, 1.0)!)
+        
         JournalManager.shared.saveCoreData(title: journalTitle.text!, content: content.text!, time: Date(), picture: imageData)
-        print(Date())
+        
     }
 }
