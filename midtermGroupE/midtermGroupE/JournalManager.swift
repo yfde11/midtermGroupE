@@ -21,32 +21,37 @@ class JournalManager {
 
             let context = app.persistentContainer.viewContext
 
-            //            let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
-            //            request.predicate = NSPredicate(format: "order == %@", order)
-                //                guard let results = try context.fetch(request) as? [JournalInfo] else {
-                //                    return
-                //                }
-                //
-                //                if results.count > 0 {
-                //                    results[0].title = title
-                //                    results[0].content = content
-                //                    results[0].time = time
-                //                    results[0].picture = picture
-                //
-                //                } else {
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
+            request.predicate = NSPredicate(format: "time == %@", time as CVarArg)
+            
+            do {
+                guard let results = try context.fetch(request) as? [JournalInfo] else {
+                    return
+                }
+                
+                if results.count > 0 {
+                    results[0].title = title
+                    results[0].content = content
+                    results[0].time = time as NSDate
+                    results[0].picture = picture
+                
+                } else {
 
-                let entity = NSEntityDescription.insertNewObject(forEntityName: Constants.CoreDataKey.entityName, into: context)
+                    let entity = NSEntityDescription.insertNewObject(forEntityName: Constants.CoreDataKey.entityName, into: context)
 
-                entity.setValue(title, forKey: Constants.CoreDataKey.title)
-                entity.setValue(content, forKey: Constants.CoreDataKey.content)
-                entity.setValue(time, forKey: Constants.CoreDataKey.time)
-                entity.setValue(picture, forKey: Constants.CoreDataKey.picture)
-                //                }
+                    entity.setValue(title, forKey: Constants.CoreDataKey.title)
+                    entity.setValue(content, forKey: Constants.CoreDataKey.content)
+                    entity.setValue(time, forKey: Constants.CoreDataKey.time)
+                    entity.setValue(picture, forKey: Constants.CoreDataKey.picture)
+                }
 
                 app.saveContext()
-                print("SAVED")
+
+            } catch {
+                print(error)
+            }
         }
-        print(NSPersistentContainer.defaultDirectoryURL())
+//        print(NSPersistentContainer.defaultDirectoryURL())
     }
 
     func getCoreData() {
