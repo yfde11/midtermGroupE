@@ -23,18 +23,18 @@ class JournalManager {
 
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
             request.predicate = NSPredicate(format: "time == %@", time as CVarArg)
-            
+
             do {
                 guard let results = try context.fetch(request) as? [JournalInfo] else {
                     return
                 }
-                
+
                 if results.count > 0 {
                     results[0].title = title
                     results[0].content = content
                     results[0].time = time as NSDate
                     results[0].picture = picture
-                
+
                 } else {
 
                     let entity = NSEntityDescription.insertNewObject(forEntityName: Constants.CoreDataKey.entityName, into: context)
@@ -86,6 +86,29 @@ class JournalManager {
 
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
+        }
+
+    }
+
+    func deleteCoreData(for indexPath: IndexPath) {
+
+        guard let app = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+
+        let context = app.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreDataKey.entityName)
+
+        do {
+            let results = try context.fetch(fetchRequest) as? [NSManagedObject]
+            let newIndexPath = (results?.count)! - 1 - indexPath.row
+            
+            context.delete((results?[newIndexPath])!)
+            
+            app.saveContext()
+
+        } catch {
+            print(error)
         }
 
     }

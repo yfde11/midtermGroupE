@@ -88,8 +88,10 @@ class JournalListTableViewController: UITableViewController {
         if editingStyle == .delete {
 
             journals.remove(at: indexPath.row)
+            JournalManager.shared.deleteCoreData(for: indexPath)
 
             tableView.deleteRows(at: [indexPath], with: .fade)
+
         }
     }
 }

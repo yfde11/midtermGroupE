@@ -23,7 +23,7 @@ class AddJournalsViewController: UIViewController, FusumaDelegate {
         let imageData = NSData(data: UIImageJPEGRepresentation(journalImagePicker.image!, 1.0)!)
 
         JournalManager.shared.saveCoreData(title: journalTitle.text!, content: content.text!, time: Date(), picture: imageData)
-        
+
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "root")
         self.present(vc!, animated: true, completion: nil)
 

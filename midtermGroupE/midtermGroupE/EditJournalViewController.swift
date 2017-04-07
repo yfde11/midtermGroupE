@@ -25,6 +25,10 @@ class EditJournalViewController: UIViewController {
     }
     @IBAction func finishEdit(_ sender: Any) {
         print("Edit success")
+
         JournalManager.shared.saveCoreData(title: editTitle.text!, content: editContent.text!, time: receivedJournals[0].time, picture: receivedJournals[0].picture)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "root")
+        self.present(vc!, animated: true, completion: nil)
     }
 }
