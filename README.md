@@ -19,6 +19,7 @@ Michael 負責整個 app UI刻畫、畫面串接和第三方套件實作，Celes
 <img src="https://github.com/CelesteTang/Journal-MidtermGroupE/blob/master/ScreenShots/4.png?raw=true" width="20%" height="20%">
 <img src="https://github.com/CelesteTang/Journal-MidtermGroupE/blob/master/ScreenShots/5.png?raw=true" width="20%" height="20%">
 <img src="https://github.com/CelesteTang/Journal-MidtermGroupE/blob/master/ScreenShots/6.png?raw=true" width="20%" height="20%">
+
 ## Requirement
 * iOS 10.2+
 * Xcode 8.2+
